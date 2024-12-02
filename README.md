@@ -6,4 +6,46 @@ av Saga Einarsdotter Kikajon
 
 ## Om webbtjänsten
 
-## CRUD
+Den här webbtjänsten handlar om fiske, eftersom det skulle byggas ett REST API med CRUD-funktionalitet baserat på ens fritidsintresse. Det är byggt i Laravel.
+
+## Endpoints
+
+| Metod   | Sökväg         | Handling                      |
+| ------- | -------------- | ----------------------------- |
+| GET     | /api/fish      | Hämtar alla rader i databasen |
+|  GET    |  /api/fish/:id |  Hämtar rad baserat på id     |
+| POST    |  /api/fish     |  Lägger till rad i databasen  |
+| PUT     |  /api/fish/:id | Uppdaterar rad i databasen    |
+|  DELETE |  /api/fish/:id |  Raderar rad ur databasen     |
+
+Till exempel leder ett GET-anrop till /api/fish/2 till
+
+```
+{
+  "id": 2,
+  "species": "Öring",
+  "lengthInCm": 36,
+  "weightInGrams": null,
+  "released": false,
+  "caughtWith": "Haspelspö, kopparspinnare",
+  "created_at": "2024-12-02T17:49:43.000000Z",
+  "updated_at": "2024-12-02T17:52:24.000000Z"
+}
+```
+
+## Databas
+
+Databasen är en PostgreSQL-databas på Render.com.  
+Den har följande struktur:
+| Nyckel | Datatyp | nullable |
+| ------- |-------- |---------- |
+| id - PK | bigint | not null |
+| species | varchar(64) | not null |
+| lengthInCm | double | nullable |
+| weightInGrams | integer | nullable |
+| released | boolean | not null |
+| caughtWith | varchar(64) | not null |
+| created_at | timestamp | nullable |
+| updated_at | timestamp | nullable |
+
+ID och timestamps genereras automatiskt.
