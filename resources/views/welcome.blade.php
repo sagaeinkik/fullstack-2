@@ -913,7 +913,49 @@
 
         <main>
             <h1>API för Moment 2 i Fullstack-utveckling med ramverk.</h1>
-            <p>Dokumentation finns på ((fyll på med länk här)) </p>
+            <p>Dokumentation finns på <a href="https://github.com/sagaeinkik/fullstack-2" target="_blank">Github</a>.</p>
+            <p>Endpoints:</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Metod</th>
+                        <th>Endpoint</th>
+                        <th>Resultat</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>GET</td>
+                        <td>api/</td>
+                        <td>Info om API</td>
+                    </tr>
+                    <tr>
+                        <td>GET</td>
+                        <td>api/fish</td>
+                        <td>Lista alla rader i databasen</td>
+                    </tr>
+                    <tr>
+                        <td>GET</td>
+                        <td>api/fish/:id</td>
+                        <td>Hämtar enskild rad från databasen, baserat på ID</td>
+                    </tr>
+                    <tr>
+                        <td>POST</td>
+                        <td>api/fish</td>
+                        <td>Lägger till rad i databasen</td>
+                    </tr>
+                    <tr>
+                        <td>PUT</td>
+                        <td>api/fish/:id</td>
+                        <td>Uppdaterar rad i databasen</td>
+                    </tr>
+                    <tr>
+                        <td>DELETE</td>
+                        <td>api/fish/:id</td>
+                        <td>Raderar rad ur databasen</td>
+                    </tr>
+                </tbody>
+            </table>
         </main>
         <footer class="py-16 text-center text-sm text-black dark:text-white/70">
             Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})
