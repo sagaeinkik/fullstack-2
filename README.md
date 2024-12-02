@@ -10,13 +10,14 @@ Den här webbtjänsten handlar om fiske, eftersom det skulle byggas ett REST API
 
 ## Endpoints
 
-| Metod   | Sökväg         | Handling                      |
-| ------- | -------------- | ----------------------------- |
-| GET     | /api/fish      | Hämtar alla rader i databasen |
-|  GET    |  /api/fish/:id |  Hämtar rad baserat på id     |
-| POST    |  /api/fish     |  Lägger till rad i databasen  |
-| PUT     |  /api/fish/:id | Uppdaterar rad i databasen    |
-|  DELETE |  /api/fish/:id |  Raderar rad ur databasen     |
+| Metod   | Sökväg        | Handling                      |
+| ------- | ------------- | ----------------------------- |
+| GET     |  api/         | Visar information om API:et   |
+| GET     | api/fish      | Hämtar alla rader i databasen |
+|  GET    |  api/fish/:id |  Hämtar rad baserat på id     |
+| POST    |  api/fish     |  Lägger till rad i databasen  |
+| PUT     |  api/fish/:id | Uppdaterar rad i databasen    |
+|  DELETE |  api/fish/:id |  Raderar rad ur databasen     |
 
 Till exempel leder ett GET-anrop till /api/fish/2 till
 
