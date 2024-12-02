@@ -18,11 +18,11 @@ class FishController extends Controller
     {
         //validera: regex för max 7 tecken innan ett decimaltecken, och max 3 efteråt
         $request->validate([
-            "species" => "required|min:2|max:64",
+            "species" => "required|string|min:2|max:64",
             "lengthInCm" => "nullable|regex:/^\d{1,7}(\.\d{0,3})?$/",
             "weightInGrams" => "nullable|integer|max_digits: 6",
             "released" => "required|boolean",
-            "caughtWith" => "required|min:2|max:64"
+            "caughtWith" => "required|string|min:2|max:64"
         ]);
 
         //returnera med skapa
@@ -48,11 +48,11 @@ class FishController extends Controller
     {
         //validera
         $request->validate([
-            "species" => "required|min:2|max:64",
+            "species" => "required|string|min:2|max:64",
             "lengthInCm" => "nullable|regex:/^\d{1,7}(\.\d{0,3})?$/",
             "weightInGrams" => "nullable|integer|max_digits: 6",
             "released" => "required|boolean",
-            "caughtWith" => "required|min:2|max:64"
+            "caughtWith" => "required|string|min:2|max:64"
         ]);
 
         //Hitta fisk
