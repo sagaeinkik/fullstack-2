@@ -10,11 +10,11 @@ Route::get('/', function () {
         "greeting" => "Hej och välkommen till mitt api! Det är gjort för Fullstacksutveckling med ramverk, på Mittuniversitet 2024.",
         "apiInfo" => "Dokumentation finns på https://github.com/sagaeinkik/fullstack-2",
         "endpoints" => [
-            "get" => "api/fish",
-            "get" => "api/fish/:id",
-            "post" => "api/fish",
-            "put" => "api/fish/:id",
-            "delete" => "api/fish/:id"
+            "Hämta alla rader" => "GET api/fish",
+            "Hämta enskild rad" => "GET api/fish/:id",
+            "Lägg till rad" => "POST api/fish",
+            "Uppdatera rad" => "PUT api/fish/:id",
+            "Radera rad" => "DELETE api/fish/:id"
         ]
     ]);
 });
