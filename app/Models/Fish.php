@@ -17,7 +17,16 @@ class Fish extends Model
 
     //Se till att enheter blir rätt typ
     protected $casts = [
-        "lengthInCm" => "float",
+        "lengthInCm" => "double",
         "weightInGrams" => "integer"
     ];
+
+    public function getLengthInCmAttribute($value)
+    {
+        // Om det finns decimaler, avrunda till 3 decimaler
+        if ($value != floor($value)) {
+            return round($value, 3);
+        }
+        return $value;
+    }
 }

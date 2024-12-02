@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('fish', function (Blueprint $table) {
             $table->id();
             $table->string("species", 64);
-            $table->decimal("lengthInCm", 8, 3)->nullable();
+            $table->double("lengthInCm", 8, 3)->nullable();
             $table->integer("weightInGrams")->nullable();
             $table->boolean("released");
             $table->string("caughtWith", 64);
