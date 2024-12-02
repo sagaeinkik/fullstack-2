@@ -1,6 +1,16 @@
 FROM richarvey/nginx-php-fpm:latest
 
-COPY . .
+#COPY . .
+
+# Kopiera alla filer till containerns arbetskatalog
+COPY . /var/www/html/
+
+# Kopiera skriptet till en lämplig plats och gör det körbart
+COPY scripts/00-laravel-deploy.sh /usr/local/bin/laravel-setup
+RUN chmod +x /usr/local/bin/laravel-setup
+
+# Kör skriptet för att installera beroenden och konfigurera Laravel
+RUN /usr/local/bin/laravel-setup
 
 # Image config
 ENV SKIP_COMPOSER 1
