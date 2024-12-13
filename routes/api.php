@@ -20,8 +20,8 @@ Route::get('/', function () {
 });
 
 //Route som eventuellt kan hålla render vaken
-Route::get('/health', function () {
-    return response()->json(['status' => 'healthy'], 200);
+Route::get('/test', function () {
+    return response()->json(['Gick bra?' => 'Ja'], 200);
 });
 
 Route::resource("fish", FishController::class);
