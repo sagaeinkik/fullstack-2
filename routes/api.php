@@ -16,7 +16,7 @@ Route::get('/', function () {
             "Uppdatera rad" => "PUT api/fish/:id",
             "Radera rad" => "DELETE api/fish/:id"
         ]
-    ]);
+    ], 200);
 });
 
 //Route som eventuellt kan hålla render vaken
