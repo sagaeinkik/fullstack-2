@@ -13,7 +13,7 @@
     "env": {
         "APP_ENV": "production",
         "APP_DEBUG": "true",
-        "APP_URL": "https://fullstack-2-ten.vercel.app",
+        "APP_URL": "https://fishapi.vercel.app",
         "APP_KEY": "base64:3iC3t6ZRHKIHJGS4ULNH/xFL/JOHniR3x0Os2uOsX6g=",
 
         "APP_CONFIG_CACHE": "/tmp/config.php",
