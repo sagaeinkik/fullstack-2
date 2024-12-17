@@ -22,7 +22,8 @@ class FishController extends Controller
             "lengthInCm" => "nullable|regex:/^\d{1,7}(\.\d{0,3})?$/",
             "weightInGrams" => "nullable|integer|max_digits: 6",
             "released" => "required|boolean",
-            "caughtWith" => "required|string|min:2|max:64"
+            "caughtWith" => "required|string|min:2|max:64",
+            "comment" => "nullable|string|max:550"
         ]);
 
         //returnera med skapa
@@ -52,7 +53,8 @@ class FishController extends Controller
             "lengthInCm" => "nullable|regex:/^\d{1,7}(\.\d{0,3})?$/",
             "weightInGrams" => "nullable|integer|max_digits: 6",
             "released" => "required|boolean",
-            "caughtWith" => "required|string|min:2|max:64"
+            "caughtWith" => "required|string|min:2|max:64",
+            "comment" => "nullable|string|max:550"
         ]);
 
         //Hitta fisk

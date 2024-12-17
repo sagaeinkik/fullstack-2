@@ -12,7 +12,8 @@ class Fish extends Model
         "lengthInCm",
         "weightInGrams",
         "released",
-        "caughtWith"
+        "caughtWith",
+        "comment"
     ];
 
     //Se till att enheter blir rätt typ

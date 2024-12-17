@@ -18,6 +18,7 @@ return new class extends Migration
             $table->integer("weightInGrams")->nullable();
             $table->boolean("released");
             $table->string("caughtWith", 64);
+            $table->string("comment", 550)->nullable();
             $table->timestamps();
         });
     }
