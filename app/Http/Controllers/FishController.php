@@ -10,7 +10,7 @@ class FishController extends Controller
     //Hämta alla rader i databasen
     public function index()
     {
-        return Fish::all();
+        return Fish::orderByDesc("created_at")->get();
     }
 
     //Lagra ny rad
